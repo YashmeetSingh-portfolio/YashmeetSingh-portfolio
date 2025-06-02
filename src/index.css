@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  /* Color palette */
+  --primary: #64ffda;
+  --primary-dark: #52d3b3;
+  --secondary: #5271ff;
+  --dark: #0a192f;
+  --darker: #020c1b;
+  --light: #ccd6f6;
+  --lighter: #e6f1ff;
+  --gray: #8892b0;
+  
+  /* Matrix colors */
+  --matrix-color: #00ff9d;
+  --matrix-bg: rgba(5, 10, 20, 0.95);
+  --gradient-start: rgba(10, 25, 47, 0.9);
+  --gradient-mid: rgba(100, 255, 218, 0.1);
+  --gradient-end: rgba(10, 25, 47, 0.9);
+  
+  /* Typography */
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* Other */
+  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --border-radius: 4px;
+  --navbar-height: 90px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  color: var(--light);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  overflow-x: hidden;
+  padding-top: var(--navbar-height);
+  background-color: transparent;
+}
+
+/* Matrix Background Container */
+.matrix-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.matrix-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    var(--gradient-start) 0%,
+    var(--gradient-mid) 50%,
+    var(--gradient-end) 100%
+  );
+  pointer-events: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 10px 0;
+  font-weight: 600;
+  color: var(--lighter);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+section {
+  padding: 100px 0;
+  position: relative; /* Ensure content appears above background */
+}
+
+/* Code styling */
+code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--darker);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+/* Animation classes */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes colorPulse {
+  0%, 100% {
+    color: var(--primary);
+  }
+  50% {
+    color: var(--secondary);
+  }
+}
+
+@keyframes matrixGlow {
+  0% {
+    text-shadow: 0 0 5px var(--matrix-color);
+  }
+  100% {
+    text-shadow: 0 0 20px var(--matrix-color), 
+                 0 0 30px var(--matrix-color);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.pulse {
+  animation: colorPulse 8s infinite alternate;
+}
+
+.matrix-glow {
+  animation: matrixGlow 2s ease-in-out infinite alternate;
+}
+
+/* Utility classes */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative; /* Ensure content stays above background */
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.bg-dark {
+  background-color: var(--dark);
+}
+
+.bg-darker {
+  background-color: var(--darker);
+}
+
+/* Content container to ensure readability over matrix */
+.content-container {
+  background: rgba(10, 25, 47, 0.7);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 1rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+  
+  section {
+    padding: 70px 0;
+  }
+  
+  .content-container {
+    padding: 1.5rem;
+    backdrop-filter: blur(2px);
+  }
+}
+/* Add this to your global.css */
+.header-terminal-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(
+    to bottom, 
+    var(--darker) 0%, 
+    transparent 100%
+  );
+  padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .header-terminal-wrapper {
+    position: static;
+    padding-bottom: 0;
+  }
+  .body{
+    cursor: default;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 80px; /* Adjust based on your navbar height */
+}
+/* Custom Cursor Styles */
+#customCursor {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1 !important; /* Force visibility */
+}
+
+.cursor-outer {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #0af;
+  border-radius: 50%;
+  transition: all 0.2s ease-out;
+}
+
+.cursor-inner {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #0af;
+  border-radius: 50%;
+  transition: all 0.1s ease;
+}
+
+/* Hover state */
+#customCursor.cursor-hover .cursor-outer {
+  transform: scale(1.8);
+  border-color: #0f0;
+  opacity: 0.7;
+}
+
+#customCursor.cursor-hover .cursor-inner {
+  transform: scale(0.5);
+  background: #0f0;
+}
+
+/* Hide default cursor */
+html, body, a, button {
+  cursor: none !important;
+}
+
+/* Ensure cursor is visible on all backgrounds */
+#customCursor {
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.7));
+}

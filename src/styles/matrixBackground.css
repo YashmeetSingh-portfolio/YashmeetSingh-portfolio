@@ -1,0 +1,30 @@
+.matrix-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.matrix-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 25, 47, 0.9) 0%,
+    rgba(100, 255, 218, 0.1) 50%,
+    rgba(10, 25, 47, 0.9) 100%
+  );
+  pointer-events: none;
+}

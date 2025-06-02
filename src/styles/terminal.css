@@ -1,0 +1,182 @@
+.terminal-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin: 3rem;
+    border-radius: 8px 8px 8px 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    background: rgba(10, 25, 47, 0.95);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    height: 430px;
+    z-index: 1;
+    /* Just below navbar */
+    position: relative;
+    top: -1px;
+    /* Pull up slightly to eliminate gap */
+}
+
+.terminal-sup {
+    width: 85%;
+    max-width: 1200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 3rem;
+    border-radius: 8px 8px 8px 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(100, 255, 218, 0.2);
+
+    z-index: 1;
+    /* Just below navbar */
+    position: relative;
+    top: -1px;
+}
+
+.terminal-header {
+    display: flex;
+    align-items: center;
+    padding: 6px 15px;
+    background: rgba(5, 15, 30, 0.95);
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+
+.terminal-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.terminal-btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.terminal-btn.red {
+    background: #ff5f56;
+}
+
+.terminal-btn.yellow {
+    background: #ffbd2e;
+}
+
+.terminal-btn.green {
+    background: #27c93f;
+}
+
+.terminal-title {
+    flex: 1;
+    text-align: center;
+    color: var(--gray);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+}
+
+.terminal-body {
+    height: 300px;
+    padding: 15px;
+    overflow-y: auto;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--light);
+}
+
+.terminal-line {
+    margin-bottom: 8px;
+    white-space: pre-wrap;
+}
+
+.terminal-line.input {
+    color: var(--primary);
+}
+
+.terminal-line.response {
+    color: var(--light);
+}
+
+.terminal-input-line {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.terminal-prompt {
+    color: var(--primary);
+    margin-right: 8px;
+}
+
+.terminal-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--light);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    caret-color: var(--primary);
+}
+
+/* Terminal scrollbar */
+.terminal-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.terminal-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+    background: rgba(100, 255, 218, 0.3);
+    border-radius: 3px;
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--primary)
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .terminal-container {
+        width: 90%;
+        border-radius: 8px;
+        margin-top: 3rem;
+        top: 0;
+    }
+
+    body {
+        padding-top: calc(var(--navbar-height) + 1px);
+    }
+
+    .terminal-body {
+        height: 200px;
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+}
