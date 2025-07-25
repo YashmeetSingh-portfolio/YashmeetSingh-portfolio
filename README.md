@@ -1,14 +1,14 @@
 **This is my portfolio Website**
-   This is an opensource tempelate So, Anyone who want can clone this Repository and Edit The Details
+   1.This is an opensource tempelate So, Anyone who want can clone this Repository and Edit The Details
 
 **Requirements:**
-   Nodejs Installed
-   A Code Editor
+   1.Nodejs Installed
+   2.A Code Editor
 
 **Setup**
-   in any folder Run following Commands in the terminal
-   git clone https://github.com/YashmeetSingh-portfolio/YashmeetSingh-portfolio.git
-   cd YashmeetSingh-portfolio
-   npm install or yarn install
+   1.in any folder Run following Commands in the terminal
+   2.git clone https://github.com/YashmeetSingh-portfolio/YashmeetSingh-portfolio.git
+   3.cd YashmeetSingh-portfolio
+   4.npm install or yarn install
 
 **Now just go ahead and edit the tempelate**
