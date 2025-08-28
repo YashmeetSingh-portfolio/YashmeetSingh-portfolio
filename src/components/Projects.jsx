@@ -3,14 +3,15 @@ import { OrbitControls, Stage } from '@react-three/drei';
 import '../styles/projects.css';
 import ecomLogo from '../assets/choose&get.png';
 import devTellerLogo from '../assets/devTeller.png';
+import TheOutsideLogo from '../assets/TheOutside.png'
 
 const projects = [
   {
-    name: 'Choose&Get',
-    desc: 'An ecommerce app ',
-    icon: ecomLogo,
-    command: 'run choose-Get-preview',
-    url: 'https://choose-get.vercel.app/'
+    name: 'The Outside',
+    desc: 'An AI powered Space Learning Website',
+    icon: TheOutsideLogo,
+    command: 'run The_Outside Preview',
+    url: 'https://the-outside.onrender.com/'
   },
   {
     name: 'Dev Teller',

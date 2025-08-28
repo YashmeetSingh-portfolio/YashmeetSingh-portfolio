@@ -21,7 +21,26 @@ const services = [
     description: "Optimizing and managing SQL databases for efficient data handling.",
     command: "connect db.sql"
   },
- 
+  {
+    title: "React Native Development",
+    description: "Building User friendly functional apps with performance optimisation",
+    command: "run ReactNative_Dev"
+  },
+   {
+    title: "AI APIs Integration",
+    description: "Integrating AI APIs (GPT,Gemini,Claude,Deepseek) into Your Websites/Apps",
+    command: "npm run AI_API"
+  },
+   {
+    title: "Firebase",
+    description: "Using Google Firebase tools in your Website/APP",
+    command: "npm i firebase"
+  },
+  {
+    title: "Authentication",
+    description: "Authenticating users Using modern hashing algorithms md5 sha etc",
+    command: "sudo hashPassword"
+  },
 ];
 
 const Services = () => {

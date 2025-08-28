@@ -9,8 +9,10 @@ import cssLogo from '../assets/css.png';
 import sqlLogo from '../assets/sql.png';
 import axiosLogo from '../assets/axios.png';
 import authLogo from '../assets/authentication.png';
+import ReactNativeLogo from '../assets/ReactNative.png'
 import yash from '../assets/profile.jpg';
-
+import AILogo from '../assets/AILogo.png';
+import firebaseIcon from '../assets/FirebaseIcon.png'
 const Hero = () => {
   const [typedText, setTypedText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
@@ -18,6 +20,7 @@ const Hero = () => {
   const phrases = [
     "Enthusiastic Programmer",
     "Full-Stack Web Developer",
+    "React Native Developer",
     "UI/UX Engineer",
     "SQL Database Expert",
     "API Expert"
@@ -33,6 +36,9 @@ const Hero = () => {
     { name: "PostgreSQL", icon: sqlLogo },
     { name: "Axios", icon: axiosLogo },
     { name: "Authentication", icon: authLogo },
+    { name: "React Native", icon: ReactNativeLogo },
+    { name: "AI APIs Integration", icon:AILogo},
+    { name: "Firebase", icon:firebaseIcon }
   ];
 
   useEffect(() => {
