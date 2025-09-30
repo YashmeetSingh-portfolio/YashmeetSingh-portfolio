@@ -10,7 +10,7 @@ import sqlLogo from '../assets/sql.png';
 import axiosLogo from '../assets/axios.png';
 import authLogo from '../assets/authentication.png';
 import ReactNativeLogo from '../assets/ReactNative.png'
-import yash from '../assets/profile.jpg';
+import yash from '../assets/profile.png';
 import AILogo from '../assets/AILogo.png';
 import firebaseIcon from '../assets/FirebaseIcon.png'
 const Hero = () => {

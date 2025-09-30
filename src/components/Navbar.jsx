@@ -112,7 +112,7 @@ const Navbar = () => {
               <span className="link-number">01</span>_home
             </a>
           </li>
-         
+
           <li>
             <a
               className={`nav-link ${activeLink === 'skills' ? 'active' : ''}`}
@@ -125,7 +125,7 @@ const Navbar = () => {
               <span className="link-number">02</span>_skills
             </a>
           </li>
-           <li>
+          <li>
             <a
               className={`nav-link ${activeLink === 'projects' ? 'active' : ''}`}
               role="button"
@@ -150,21 +150,24 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <button
-              className="resume-btn"
-              onMouseEnter={(e) => {
-                setHoverCommand('./resume.sh --download');
-                const rect = e.target.getBoundingClientRect();
-                setHoverPosition({
-                  x: rect.left + rect.width / 2,
-                  y: rect.bottom + 10,
-                });
-              }}
-              onMouseLeave={handleLinkLeave}
-            >
-              <span className="btn-text">./resume.sh</span>
-              <span className="btn-bg"></span>
-            </button>
+            <a href="/path/to/your/resume.pdf"
+              download="Yashmeet_Singh_Resume.pdf">
+              <button
+                className="resume-btn"
+                onMouseEnter={(e) => {
+                  setHoverCommand('./resume.sh --download');
+                  const rect = e.target.getBoundingClientRect();
+                  setHoverPosition({
+                    x: rect.left + rect.width / 2,
+                    y: rect.bottom + 10,
+                  });
+                }}
+                onMouseLeave={handleLinkLeave}
+              >
+                <span className="btn-text">./resume.sh</span>
+                <span className="btn-bg"></span>
+              </button>
+            </a>
           </li>
         </ul>
       </div>
