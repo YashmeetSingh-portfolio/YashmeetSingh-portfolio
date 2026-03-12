@@ -4,7 +4,8 @@ import '../styles/projects.css';
 import ecomLogo from '../assets/choose&get.png';
 import devTellerLogo from '../assets/devTeller.png';
 import TheOutsideLogo from '../assets/TheOutside.png'
-
+import oye from '../assets/oye.png'
+import focused from '../assets/focused.png'
 const projects = [
   {
     name: 'The Outside',
@@ -20,13 +21,22 @@ const projects = [
     command: 'run devTeller-preview',
     url: 'https://devteller.vercel.app/'
   },
-  // {
-  //   name: 'Blog CMS',
-  //   desc: 'Blog CMS with markdown editor, login, and analytics.',
-  //   icon: 'limegreen',
-  //   command: 'run blog-preview'
-  // }
+  {
+    name: 'Oye messenger',
+    desc: 'A real-time messaging application.',
+    icon: oye,
+    command: 'run oye-messenger-preview',
+    url: 'https://oye-messenger.vercel.app/'
+  },
+  {
+    name: 'Focused',
+    desc: 'A productivity app which blocks your phone for focused work sessions.',
+    icon: focused,
+    command: 'run focused-preview',
+    url: 'https://github.com/YashmeetSingh-portfolio/Focused/releases/download/release/Focused.apk'
+  }
 ];
+
 
 const Projects = () => {
   function openInNewTab(url) {
