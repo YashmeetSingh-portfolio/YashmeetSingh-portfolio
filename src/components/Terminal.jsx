@@ -12,8 +12,8 @@ const Terminal = ({ scrollRefs }) => {
     { cmd: 'ls skills', response: 'React, Node.js, Express.js, JavaScript, CSS, HTML, PostgreSQL, Authentication, Axios' },
     { cmd: 'ls projects', action: () => scrollToSection('projects') },
     { cmd: 'npm run contact', action: () => scrollToSection('contact') },
-    { cmd: 'cd github', action: () => window.open('https://github.com/your-username', '_blank') },
-    { cmd: 'cd linkedin', action: () => window.open('https://linkedin.com/in/your-profile', '_blank') },
+    { cmd: 'cd github', action: () => window.open('https://github.com/YashmeetSingh-portfolio', '_blank') },
+    { cmd: 'cd linkedin', action: () => window.open('https://www.linkedin.com/in/yashmeet-dhaliwal-307a452a8/', '_blank') },
   ];
 
   const smoothScrollTo = (targetY) => {
